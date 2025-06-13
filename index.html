@@ -3,6 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Great India - Fashion</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f6f6f6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px #00000010;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      color: #ff3f6c;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Category bar */
+    .categories {
+      background-color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .categories a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .categories a:hover {
+      color: #ff3f6c;
+      border-bottom: 2px solid #ff3f6c;
+    }
+
+    /* Product Grid */
+    .products {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #00000010;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-info {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .product-info h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .product-info span {
+      color: #ff3f6c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">GreatIndia</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+    </div>
+    <div class="icons">👤 🛒 ❤️</div>
+  </div>
+
+  <!-- Category Menu -->
+  <div class="categories">
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Home</a>
+    <a href="#">Beauty</a>
+    <a href="#">Footwear</a>
+  </div>
+
+  <!-- Products Section -->
+  <div class="products">
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/295807217/pfykw_512.webp" alt="Product 1">
+      <div class="product-info">
+        <h4>Printed T-Shirt</h4>
+        <p>Men's Fashion</p>
+        <span>₹299</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/314731514/pmurx_512.webp" alt="Product 2">
+      <div class="product-info">
+        <h4>Kurta Set</h4>
+        <p>Women's Ethnic</p>
+        <span>₹499</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/298818270/vbnun_512.webp" alt="Product 3">
+      <div class="product-info">
+        <h4>Kids Wear</h4>
+        <p>New Arrival</p>
+        <span>₹399</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Great India</title>
   <style>
     * {
