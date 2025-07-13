@@ -61,18 +61,51 @@
       padding: 10px;
       border-bottom: 1px solid #ddd;
       flex-wrap: wrap;
+      position: relative; /* Needed for absolute positioning of dropdown */
     }
 
-    nav a {
+    nav > a { /* Style direct links in nav */
       text-decoration: none;
       color: #333;
       font-weight: 500;
       padding: 8px 12px;
+      display: block; /* Make clickable area larger */
     }
 
-    nav a:hover {
+    nav > a:hover {
       color: #ff3f6c;
       border-bottom: 2px solid #ff3f6c;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-top: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+      display: none; /* Initially hidden */
+      padding: 0;
+      white-space: nowrap; /* Prevent wrapping of links */
+    }
+
+    nav:hover .dropdown {
+      display: block; /* Show dropdown on nav hover */
+    }
+
+    .dropdown a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #f9f9f9;
+      color: #ff3f6c;
     }
 
     /* Product Grid */
@@ -128,11 +161,33 @@
       font-size: 0.9rem;
       margin-top: 30px;
     }
+
+    /* Contact Us Section in Footer */
+    .contact-us {
+      margin-top: 20px;
+    }
+
+    .contact-us a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .contact-us a:hover {
+      color: #25d366; /* WhatsApp green */
+    }
+
+    .contact-us img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="logo">GreatIndia</div>
     <div class="search">
@@ -141,17 +196,22 @@
     <div class="icons">👤 🛒</div>
   </header>
 
-  <!-- Categories -->
   <nav>
     <a href="#">Men</a>
+    <div class="dropdown">
+      <a href="#">Kurtas</a>
+      <a href="#">Casual Shirts</a>
+      <a href="#">T-Shirts</a>
+      <a href="#">Other Men's Wear</a>
+    </div>
     <a href="#">Women</a>
     <a href="#">Kids</a>
     <a href="#">Home</a>
     <a href="#">Beauty</a>
     <a href="#">More</a>
+    <a href="#contact">Contact Us</a>
   </nav>
 
-  <!-- Products -->
   <section class="products">
     <div class="product">
       <img src="https://images.meesho.com/images/products/295807217/pfykw_512.webp" alt="Product 1" />
@@ -181,8 +241,13 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
+    <div class="contact-us" id="contact">
+      <a href="https://wa.me/917488367058" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp Icon">
+        Contact us on WhatsApp
+      </a>
+    </div>
     © 2025 Great India Fashion. Built with ❤️ by Aayush Aditya.
   </footer>
 
